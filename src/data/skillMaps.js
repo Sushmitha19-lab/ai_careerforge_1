@@ -1,0 +1,281 @@
+import { trackFromCourse } from "./tracks";
+
+export const SKILL_MAPS = {
+  software: {
+    id: "software",
+    title: "Software engineering",
+    headline: "Do not jump to system design. Unlock each layer first.",
+    nodes: [
+      {
+        id: "python",
+        label: "Programming",
+        skill: "python",
+        dependsOn: [],
+        before: "Syntax, types, and writing small programs without copy-paste.",
+        nextUnlocks: "DSA",
+      },
+      {
+        id: "dsa",
+        label: "DSA",
+        skill: "dsa",
+        dependsOn: ["python"],
+        before: "Arrays, hash maps, complexity, and explaining trade-offs.",
+        nextUnlocks: "Core CS",
+      },
+      {
+        id: "core",
+        label: "Core CS",
+        skill: "aptitude",
+        dependsOn: ["dsa"],
+        before: "OOP, DBMS, OS, and networks — the screening round after coding.",
+        nextUnlocks: "System design",
+      },
+      {
+        id: "design",
+        label: "System design",
+        skill: "dsa",
+        dependsOn: ["core"],
+        before: "APIs, scale, caching, and how a service fails in production.",
+        nextUnlocks: "Ownership",
+      },
+      {
+        id: "ownership",
+        label: "Ownership",
+        skill: "communication",
+        dependsOn: ["design"],
+        before: "STAR stories, stakeholders, and shipping under risk.",
+        nextUnlocks: "Company screen",
+      },
+    ],
+  },
+  ai: {
+    id: "ai",
+    title: "Data Science & AI",
+    headline: "Instead of “learn ML”, prepare what ML actually depends on.",
+    nodes: [
+      {
+        id: "python",
+        label: "Python",
+        skill: "python",
+        dependsOn: [],
+        before: "Functions, data types, and readable scripts.",
+        nextUnlocks: "NumPy / Pandas",
+      },
+      {
+        id: "numpy",
+        label: "NumPy / Pandas",
+        skill: "python",
+        dependsOn: ["python"],
+        before: "Tables, joins, missing values, and vectorized work.",
+        nextUnlocks: "Stats",
+      },
+      {
+        id: "stats",
+        label: "Stats",
+        skill: "aptitude",
+        dependsOn: ["numpy"],
+        before: "Distributions, bias/variance, and what a metric actually means.",
+        nextUnlocks: "ML",
+      },
+      {
+        id: "ml",
+        label: "ML",
+        skill: "ml",
+        dependsOn: ["stats"],
+        before: "Supervised vs unsupervised, overfitting, and evaluation.",
+        nextUnlocks: "Deep learning",
+      },
+      {
+        id: "dl",
+        label: "Deep learning",
+        skill: "ml",
+        dependsOn: ["ml"],
+        before: "When a neural net is worth it, and how you would ship it.",
+        nextUnlocks: "Company screen",
+      },
+    ],
+  },
+  cloud: {
+    id: "cloud",
+    title: "Cloud & DevOps",
+    headline: "Cloud interviews fail when Linux and networking are skipped.",
+    nodes: [
+      {
+        id: "linux",
+        label: "Linux",
+        skill: "python",
+        dependsOn: [],
+        before: "Processes, files, logs, and debugging on a box.",
+        nextUnlocks: "Networking",
+      },
+      {
+        id: "net",
+        label: "Networking",
+        skill: "aptitude",
+        dependsOn: ["linux"],
+        before: "DNS, VPC, ports, and why a service cannot be reached.",
+        nextUnlocks: "Cloud basics",
+      },
+      {
+        id: "cloud",
+        label: "Cloud basics",
+        skill: "cloud",
+        dependsOn: ["net"],
+        before: "IaaS vs PaaS vs SaaS and one real workload on each.",
+        nextUnlocks: "CI/CD",
+      },
+      {
+        id: "cicd",
+        label: "CI / CD",
+        skill: "cloud",
+        dependsOn: ["cloud"],
+        before: "Pipelines, canaries, and rolling back a bad release.",
+        nextUnlocks: "Reliability",
+      },
+      {
+        id: "sre",
+        label: "Reliability",
+        skill: "communication",
+        dependsOn: ["cicd"],
+        before: "Incidents, cost, SLAs, and talking to the business.",
+        nextUnlocks: "Company screen",
+      },
+    ],
+  },
+  security: {
+    id: "security",
+    title: "Cybersecurity",
+    headline: "Do not start with zero trust. Start with CIA and identity.",
+    nodes: [
+      {
+        id: "cia",
+        label: "CIA basics",
+        skill: "aptitude",
+        dependsOn: [],
+        before: "Confidentiality, integrity, availability with a real example.",
+        nextUnlocks: "AppSec",
+      },
+      {
+        id: "appsec",
+        label: "AppSec",
+        skill: "dsa",
+        dependsOn: ["cia"],
+        before: "Injection, access control, and how you prove a fix.",
+        nextUnlocks: "IAM",
+      },
+      {
+        id: "iam",
+        label: "IAM",
+        skill: "python",
+        dependsOn: ["appsec"],
+        before: "Least privilege, MFA, and joiners-movers-leavers.",
+        nextUnlocks: "Incidents",
+      },
+      {
+        id: "incident",
+        label: "Incidents",
+        skill: "communication",
+        dependsOn: ["iam"],
+        before: "Contain, eradicate, recover, notify — in that order.",
+        nextUnlocks: "Zero trust",
+      },
+      {
+        id: "zero",
+        label: "Zero trust",
+        skill: "communication",
+        dependsOn: ["incident"],
+        before: "A phased plan that does not block the business.",
+        nextUnlocks: "Company screen",
+      },
+    ],
+  },
+  fullstack: {
+    id: "fullstack",
+    title: "Full Stack Development",
+    headline: "Do not jump to React. Unlock language, then UI, then APIs.",
+    nodes: [
+      { id: "js", label: "JavaScript", skill: "python", dependsOn: [], before: "Types, async, and the DOM without a framework.", nextUnlocks: "UI" },
+      { id: "ui", label: "UI", skill: "dsa", dependsOn: ["js"], before: "State, lists, and accessible forms.", nextUnlocks: "APIs" },
+      { id: "api", label: "APIs", skill: "aptitude", dependsOn: ["ui"], before: "HTTP, auth cookies, and error states.", nextUnlocks: "Data" },
+      { id: "data", label: "Data", skill: "dsa", dependsOn: ["api"], before: "SQL or a store, transactions, and migrations.", nextUnlocks: "Ship" },
+      { id: "ship", label: "Ship", skill: "communication", dependsOn: ["data"], before: "Observability, rollbacks, and talking to product.", nextUnlocks: "Company screen" },
+    ],
+  },
+  mobile: {
+    id: "mobile",
+    title: "Mobile Development",
+    headline: "Do not start with animations. Unlock lifecycle and offline first.",
+    nodes: [
+      { id: "lang", label: "Language", skill: "python", dependsOn: [], before: "Kotlin or Swift well enough to read a stack trace.", nextUnlocks: "Lifecycle" },
+      { id: "life", label: "Lifecycle", skill: "aptitude", dependsOn: ["lang"], before: "Rotation, process death, and where network calls live.", nextUnlocks: "Lists" },
+      { id: "list", label: "Lists & nav", skill: "dsa", dependsOn: ["life"], before: "Recycling, navigation, and jank.", nextUnlocks: "Offline" },
+      { id: "off", label: "Offline", skill: "dsa", dependsOn: ["list"], before: "Local store, sync, and conflict.", nextUnlocks: "Store" },
+      { id: "store", label: "Store quality", skill: "communication", dependsOn: ["off"], before: "Crashes, staged rollout, and review response.", nextUnlocks: "Company screen" },
+    ],
+  },
+  analytics: {
+    id: "analytics",
+    title: "Data Analytics",
+    headline: "Do not jump to dashboards. Unlock SQL and metric definitions first.",
+    nodes: [
+      { id: "sql", label: "SQL", skill: "dsa", dependsOn: [], before: "Filters, joins, and grain — what a row means.", nextUnlocks: "Stats" },
+      { id: "stats", label: "Stats", skill: "aptitude", dependsOn: ["sql"], before: "Mean vs median, bias, and sample size.", nextUnlocks: "Metrics" },
+      { id: "kpi", label: "Metrics", skill: "ml", dependsOn: ["stats"], before: "A KPI plus a guardrail, not a vanity chart.", nextUnlocks: "Story" },
+      { id: "story", label: "Story", skill: "communication", dependsOn: ["kpi"], before: "One chart that a VP can act on.", nextUnlocks: "Experiments" },
+      { id: "exp", label: "Experiments", skill: "ml", dependsOn: ["story"], before: "A/B tests and what you refuse to claim.", nextUnlocks: "Company screen" },
+    ],
+  },
+  ux: {
+    id: "ux",
+    title: "UI/UX Design",
+    headline: "Do not jump to pixels. Unlock research and flows first.",
+    nodes: [
+      { id: "research", label: "Research", skill: "aptitude", dependsOn: [], before: "Watch a task. Do not only interview opinions.", nextUnlocks: "Flows" },
+      { id: "flow", label: "Flows", skill: "dsa", dependsOn: ["research"], before: "Happy path plus one failure path.", nextUnlocks: "Wireframes" },
+      { id: "wire", label: "Wireframes", skill: "python", dependsOn: ["flow"], before: "Low-fi that a developer can estimate.", nextUnlocks: "Visual" },
+      { id: "visual", label: "Visual / a11y", skill: "aptitude", dependsOn: ["wire"], before: "Contrast, focus order, and tokens.", nextUnlocks: "Critique" },
+      { id: "crit", label: "Critique", skill: "communication", dependsOn: ["visual"], before: "Defend a design with evidence, not taste.", nextUnlocks: "Company screen" },
+    ],
+  },
+  qa: {
+    id: "qa",
+    title: "Quality Assurance",
+    headline: "Do not start with a record-and-playback suite. Unlock test design.",
+    nodes: [
+      { id: "design", label: "Test design", skill: "aptitude", dependsOn: [], before: "Boundaries, equivalence, and risk.", nextUnlocks: "Cases" },
+      { id: "cases", label: "Cases", skill: "dsa", dependsOn: ["design"], before: "Login, APIs, and one payments edge.", nextUnlocks: "Automation" },
+      { id: "auto", label: "Automation", skill: "python", dependsOn: ["cases"], before: "Stable selectors and the test pyramid.", nextUnlocks: "CI" },
+      { id: "ci", label: "Quality gates", skill: "dsa", dependsOn: ["auto"], before: "What blocks a PR versus what warns.", nextUnlocks: "Voice" },
+      { id: "voice", label: "Release voice", skill: "communication", dependsOn: ["ci"], before: "Go/no-go with evidence, not fear.", nextUnlocks: "Company screen" },
+    ],
+  },
+  database: {
+    id: "database",
+    title: "Database Engineering",
+    headline: "Do not start with sharding. Unlock SQL and transactions first.",
+    nodes: [
+      { id: "sql", label: "SQL", skill: "dsa", dependsOn: [], before: "Joins, grain, and second-highest-salary thinking.", nextUnlocks: "Model" },
+      { id: "model", label: "Modeling", skill: "aptitude", dependsOn: ["sql"], before: "3NF, then when you denormalize.", nextUnlocks: "Indexes" },
+      { id: "idx", label: "Indexes", skill: "python", dependsOn: ["model"], before: "Read EXPLAIN and say why it is slow.", nextUnlocks: "Tx" },
+      { id: "tx", label: "Transactions", skill: "dsa", dependsOn: ["idx"], before: "ACID and isolation bugs in payments.", nextUnlocks: "HA" },
+      { id: "ha", label: "HA / failover", skill: "communication", dependsOn: ["tx"], before: "RPO/RTO and telling the business what you can lose.", nextUnlocks: "Company screen" },
+    ],
+  },
+};
+
+export const SKILL_ORDER = ["python", "communication", "dsa", "aptitude", "ml", "cloud"];
+
+export const SKILL_META = {
+  python: { label: "Python", hint: "Language and implementation" },
+  communication: { label: "Communication", hint: "How clearly you explain" },
+  dsa: { label: "DSA", hint: "Structures, complexity, problem solving" },
+  aptitude: { label: "Aptitude", hint: "Fundamentals and structured thinking" },
+  ml: { label: "ML", hint: "Models, metrics, and shipping" },
+  cloud: { label: "Cloud", hint: "Platforms, delivery, operations" },
+};
+
+export function getSkillMap(course) {
+  const track = trackFromCourse(course);
+  return SKILL_MAPS[track] || SKILL_MAPS.software;
+}
+

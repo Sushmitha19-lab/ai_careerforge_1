@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+flask
+flask-cors
+joblib
+numpy
+opencv-python>=4.8.0

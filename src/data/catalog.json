@@ -1,0 +1,136 @@
+{
+  "courses": [
+    { "id": 1, "track": "software", "name": "Software Engineering", "description": "DSA, programming, system design, and full-stack roles at product companies." },
+    { "id": 2, "track": "ai", "name": "Data Science & AI", "description": "Python, machine learning, statistics, and applied AI interview tracks." },
+    { "id": 3, "track": "cloud", "name": "Cloud & DevOps", "description": "AWS, Azure, Linux, CI/CD, and platform engineering preparation." },
+    { "id": 4, "track": "security", "name": "Cybersecurity", "description": "Networks, security fundamentals, and analyst or engineer interview paths." },
+    { "id": 5, "track": "fullstack", "name": "Full Stack Development", "description": "JavaScript, APIs, databases, and shipping product features end to end." },
+    { "id": 6, "track": "mobile", "name": "Mobile Development", "description": "Android, iOS, and cross-platform apps under real device constraints." },
+    { "id": 7, "track": "analytics", "name": "Data Analytics", "description": "SQL, metrics, dashboards, and explaining numbers to the business." },
+    { "id": 8, "track": "ux", "name": "UI/UX Design", "description": "Research, wireframes, accessibility, and defending design decisions." },
+    { "id": 9, "track": "qa", "name": "Quality Assurance", "description": "Test design, automation, APIs, and raising defects without blocking delivery." },
+    { "id": 10, "track": "database", "name": "Database Engineering", "description": "SQL, modeling, indexing, transactions, and data at scale." }
+  ],
+  "companiesByCourseId": {
+    "1": [
+      { "id": 101, "name": "Google", "industry": "Product / Software", "role": "Software Engineer", "description": "DSA, systems, and coding interviews." },
+      { "id": 102, "name": "Microsoft", "industry": "Product / Software", "role": "Software Engineer", "description": "Coding, OOP, and design rounds." },
+      { "id": 103, "name": "Amazon", "industry": "E-commerce / Cloud", "role": "SDE", "description": "DSA, leadership principles, and system design." },
+      { "id": 104, "name": "Adobe", "industry": "Software", "role": "Software Engineer", "description": "Programming, databases, and product thinking." },
+      { "id": 105, "name": "Meta", "industry": "Product / Social", "role": "Software Engineer", "description": "Coding, product sense, and large-scale systems." },
+      { "id": 106, "name": "Apple", "industry": "Hardware / Software", "role": "Software Engineer", "description": "Quality, platforms, and careful coding." },
+      { "id": 107, "name": "Uber", "industry": "Marketplace", "role": "Software Engineer", "description": "DSA, distributed systems, and marketplace logic." },
+      { "id": 108, "name": "Salesforce", "industry": "Enterprise SaaS", "role": "Software Engineer", "description": "APIs, data models, and customer workflows." },
+      { "id": 109, "name": "Oracle", "industry": "Enterprise Software", "role": "Software Engineer", "description": "Java, databases, and cloud applications." },
+      { "id": 110, "name": "Infosys", "industry": "IT Services", "role": "Systems Engineer", "description": "Aptitude, coding, and client delivery skills." }
+    ],
+    "2": [
+      { "id": 201, "name": "NVIDIA", "industry": "AI / Hardware", "role": "ML Engineer", "description": "ML, CUDA-adjacent thinking, and algorithms." },
+      { "id": 202, "name": "Google", "industry": "Product / AI", "role": "ML Engineer", "description": "ML systems, coding, and research-style questions." },
+      { "id": 203, "name": "Microsoft", "industry": "Product / AI", "role": "Applied Scientist", "description": "ML fundamentals and coding." },
+      { "id": 204, "name": "IBM", "industry": "Enterprise / AI", "role": "Data Scientist", "description": "ML, Python, and applied analytics." },
+      { "id": 205, "name": "Amazon", "industry": "Cloud / AI", "role": "Applied Scientist", "description": "Recommendations, ranking, and production ML." },
+      { "id": 206, "name": "Adobe", "industry": "Creative / AI", "role": "ML Engineer", "description": "Applied ML on content and documents." },
+      { "id": 207, "name": "JPMorgan", "industry": "Finance / AI", "role": "ML Engineer", "description": "Risk models, Python, and careful evaluation." },
+      { "id": 208, "name": "Fractal", "industry": "Analytics / AI", "role": "Data Scientist", "description": "Business ML and stakeholder communication." },
+      { "id": 209, "name": "Mu Sigma", "industry": "Decision sciences", "role": "Decision Scientist", "description": "Stats, problem solving, and structured thinking." },
+      { "id": 210, "name": "TCS", "industry": "IT Services / AI", "role": "Data Scientist", "description": "Python, ML basics, and client projects." }
+    ],
+    "3": [
+      { "id": 301, "name": "Amazon", "industry": "Cloud", "role": "Cloud Engineer", "description": "AWS, Linux, and distributed systems." },
+      { "id": 302, "name": "Microsoft", "industry": "Cloud", "role": "Cloud Engineer", "description": "Azure, networking, and DevOps." },
+      { "id": 303, "name": "Google", "industry": "Cloud", "role": "Cloud Engineer", "description": "GCP, SRE habits, and automation." },
+      { "id": 304, "name": "IBM", "industry": "Enterprise Cloud", "role": "Cloud Consultant", "description": "Cloud architecture and operations." },
+      { "id": 305, "name": "Accenture", "industry": "Consulting", "role": "Cloud Analyst", "description": "Cloud fundamentals and delivery skills." },
+      { "id": 306, "name": "Oracle", "industry": "Cloud", "role": "Cloud Engineer", "description": "OCI, databases, and enterprise migration." },
+      { "id": 307, "name": "Deloitte", "industry": "Consulting / Cloud", "role": "Cloud Consultant", "description": "Architecture, cost, and client workshops." },
+      { "id": 308, "name": "Capgemini", "industry": "Services / Cloud", "role": "Cloud Engineer", "description": "Migration, Linux, and CI/CD." },
+      { "id": 309, "name": "Cisco", "industry": "Networking / Cloud", "role": "Cloud Network Engineer", "description": "Networks, hybrid cloud, and security." },
+      { "id": 310, "name": "Infosys", "industry": "IT Services / Cloud", "role": "Cloud Engineer", "description": "AWS/Azure basics and delivery." }
+    ],
+    "4": [
+      { "id": 401, "name": "Microsoft", "industry": "Product / Security", "role": "Security Engineer", "description": "Identity, networking, and secure coding." },
+      { "id": 402, "name": "Amazon", "industry": "Cloud Security", "role": "Security Engineer", "description": "AWS security and threat models." },
+      { "id": 403, "name": "IBM", "industry": "Enterprise Security", "role": "Security Engineer", "description": "Security operations and cloud security." },
+      { "id": 404, "name": "Accenture", "industry": "Consulting / Security", "role": "Security Analyst", "description": "Networks, risk, and fundamentals." },
+      { "id": 405, "name": "Cisco", "industry": "Networking / Security", "role": "Security Engineer", "description": "Firewalls, identity, and detection." },
+      { "id": 406, "name": "Palo Alto Networks", "industry": "Cybersecurity", "role": "Security Engineer", "description": "Threat prevention and cloud security." },
+      { "id": 407, "name": "CrowdStrike", "industry": "Endpoint Security", "role": "Detection Engineer", "description": "Logs, detections, and response." },
+      { "id": 408, "name": "Deloitte", "industry": "Risk / Security", "role": "Cyber Analyst", "description": "Controls, audits, and client risk." },
+      { "id": 409, "name": "Wipro", "industry": "IT Services / Security", "role": "Security Analyst", "description": "SOC basics and ticketing under SLA." },
+      { "id": 410, "name": "TCS", "industry": "IT Services / Security", "role": "Security Analyst", "description": "Networks, IAM, and operations." }
+    ],
+    "5": [
+      { "id": 501, "name": "Google", "industry": "Product", "role": "Full Stack Engineer", "description": "JavaScript, APIs, and product quality." },
+      { "id": 502, "name": "Microsoft", "industry": "Product", "role": "Full Stack Engineer", "description": "Web apps, Azure, and TypeScript." },
+      { "id": 503, "name": "Amazon", "industry": "Product", "role": "SDE", "description": "Services, UI, and operational excellence." },
+      { "id": 504, "name": "Flipkart", "industry": "E-commerce", "role": "SDE", "description": "Scale, checkout flows, and Java/JS." },
+      { "id": 505, "name": "Swiggy", "industry": "Consumer tech", "role": "SDE", "description": "Realtime systems and product features." },
+      { "id": 506, "name": "Razorpay", "industry": "Fintech", "role": "SDE", "description": "Payments, APIs, and reliability." },
+      { "id": 507, "name": "Zoho", "industry": "SaaS", "role": "Software Engineer", "description": "Product depth and full-stack ownership." },
+      { "id": 508, "name": "Infosys", "industry": "IT Services", "role": "Full Stack Engineer", "description": "Java/JS delivery for clients." },
+      { "id": 509, "name": "TCS", "industry": "IT Services", "role": "Developer", "description": "Web stack and client communication." },
+      { "id": 510, "name": "Cognizant", "industry": "IT Services", "role": "Full Stack Engineer", "description": "Enterprise web applications." }
+    ],
+    "6": [
+      { "id": 601, "name": "Google", "industry": "Product / Android", "role": "Android Engineer", "description": "Kotlin, lifecycle, and Play quality." },
+      { "id": 602, "name": "Apple", "industry": "Product / iOS", "role": "iOS Engineer", "description": "Swift, UIKit/SwiftUI, and performance." },
+      { "id": 603, "name": "Meta", "industry": "Product / Mobile", "role": "Mobile Engineer", "description": "React Native or native at scale." },
+      { "id": 604, "name": "Uber", "industry": "Marketplace / Mobile", "role": "Mobile Engineer", "description": "Maps, realtime, and battery/network." },
+      { "id": 605, "name": "Swiggy", "industry": "Consumer / Mobile", "role": "Android Engineer", "description": "Consumer apps and offline resilience." },
+      { "id": 606, "name": "PhonePe", "industry": "Fintech / Mobile", "role": "Android Engineer", "description": "Payments UX and device security." },
+      { "id": 607, "name": "Flipkart", "industry": "E-commerce / Mobile", "role": "Mobile Engineer", "description": "Catalog, cart, and performance." },
+      { "id": 608, "name": "Microsoft", "industry": "Product / Mobile", "role": "Mobile Engineer", "description": "Cross-platform apps and identity." },
+      { "id": 609, "name": "Zoho", "industry": "SaaS / Mobile", "role": "Mobile Engineer", "description": "Business apps on Android and iOS." },
+      { "id": 610, "name": "Paytm", "industry": "Fintech / Mobile", "role": "Android Engineer", "description": "Payments, KYC flows, and scale." }
+    ],
+    "7": [
+      { "id": 701, "name": "Amazon", "industry": "Retail / Analytics", "role": "Business Analyst", "description": "SQL, metrics, and experiments." },
+      { "id": 702, "name": "Microsoft", "industry": "Product / Analytics", "role": "Data Analyst", "description": "Power BI, SQL, and product metrics." },
+      { "id": 703, "name": "Google", "industry": "Product / Analytics", "role": "Data Analyst", "description": "SQL, Looker, and measurement." },
+      { "id": 704, "name": "Deloitte", "industry": "Consulting / Analytics", "role": "Analyst", "description": "Dashboards, Excel, and client stories." },
+      { "id": 705, "name": "Mu Sigma", "industry": "Decision sciences", "role": "Decision Scientist", "description": "Structured problem solving with data." },
+      { "id": 706, "name": "Fractal", "industry": "Analytics", "role": "Analyst", "description": "Business problems and ML-adjacent analytics." },
+      { "id": 707, "name": "JPMorgan", "industry": "Finance / Analytics", "role": "Data Analyst", "description": "Risk, SQL, and careful reporting." },
+      { "id": 708, "name": "IBM", "industry": "Enterprise / Analytics", "role": "Data Analyst", "description": "Cognos/BI and stakeholder reporting." },
+      { "id": 709, "name": "Accenture", "industry": "Consulting / Analytics", "role": "Analytics Analyst", "description": "KPI design and client communication." },
+      { "id": 710, "name": "Tiger Analytics", "industry": "Analytics", "role": "Analyst", "description": "SQL, Python, and business insights." }
+    ],
+    "8": [
+      { "id": 801, "name": "Google", "industry": "Product / Design", "role": "UX Designer", "description": "Research, systems, and Material quality." },
+      { "id": 802, "name": "Apple", "industry": "Product / Design", "role": "Product Designer", "description": "Craft, HIG, and interaction detail." },
+      { "id": 803, "name": "Adobe", "industry": "Creative / Design", "role": "UX Designer", "description": "Creative tools and design systems." },
+      { "id": 804, "name": "Microsoft", "industry": "Product / Design", "role": "Product Designer", "description": "Fluent, accessibility, and enterprise UX." },
+      { "id": 805, "name": "Swiggy", "industry": "Consumer / Design", "role": "Product Designer", "description": "Growth UX and messy real-world flows." },
+      { "id": 806, "name": "Flipkart", "industry": "E-commerce / Design", "role": "UX Designer", "description": "Discovery, checkout, and trust." },
+      { "id": 807, "name": "Razorpay", "industry": "Fintech / Design", "role": "Product Designer", "description": "Checkout, merchants, and clarity under risk." },
+      { "id": 808, "name": "Zoho", "industry": "SaaS / Design", "role": "UX Designer", "description": "Dense B2B products and information design." },
+      { "id": 809, "name": "Freshworks", "industry": "SaaS / Design", "role": "Product Designer", "description": "Support products and simple enterprise UX." },
+      { "id": 810, "name": "Infosys", "industry": "Services / Design", "role": "UX Designer", "description": "Client workshops and design delivery." }
+    ],
+    "9": [
+      { "id": 901, "name": "Amazon", "industry": "Product / QA", "role": "QA Engineer", "description": "Test design, automation, and customer defects." },
+      { "id": 902, "name": "Microsoft", "industry": "Product / QA", "role": "SDET", "description": "Automation, identity, and quality gates." },
+      { "id": 903, "name": "Google", "industry": "Product / QA", "role": "Test Engineer", "description": "Coverage, flakiness, and product risk." },
+      { "id": 904, "name": "Infosys", "industry": "IT Services / QA", "role": "Test Engineer", "description": "Manual plus automation for clients." },
+      { "id": 905, "name": "TCS", "industry": "IT Services / QA", "role": "Test Engineer", "description": "Test cases, defect life cycle, and SLAs." },
+      { "id": 906, "name": "Cognizant", "industry": "IT Services / QA", "role": "QA Analyst", "description": "Enterprise test programs." },
+      { "id": 907, "name": "Accenture", "industry": "Consulting / QA", "role": "Test Analyst", "description": "Risk-based testing and communication." },
+      { "id": 908, "name": "Flipkart", "industry": "E-commerce / QA", "role": "SDET", "description": "Mobile + web quality at sale events." },
+      { "id": 909, "name": "Zoho", "industry": "SaaS / QA", "role": "QA Engineer", "description": "Product depth and regression craft." },
+      { "id": 910, "name": "Wipro", "industry": "IT Services / QA", "role": "Test Engineer", "description": "Functional testing and automation basics." }
+    ],
+    "10": [
+      { "id": 1001, "name": "Oracle", "industry": "Database", "role": "Database Engineer", "description": "SQL, PL/SQL, and enterprise data." },
+      { "id": 1002, "name": "Amazon", "industry": "Cloud Data", "role": "Database Engineer", "description": "RDS, DynamoDB, and operational SQL." },
+      { "id": 1003, "name": "Microsoft", "industry": "Cloud Data", "role": "Database Engineer", "description": "Azure SQL, indexing, and reliability." },
+      { "id": 1004, "name": "Google", "industry": "Cloud Data", "role": "Data Engineer", "description": "Spanner/BigQuery thinking and SQL." },
+      { "id": 1005, "name": "IBM", "industry": "Enterprise Data", "role": "Database Engineer", "description": "Db2, warehousing, and HA." },
+      { "id": 1006, "name": "Snowflake", "industry": "Cloud Warehouse", "role": "Data Engineer", "description": "Warehouses, cost, and SQL performance." },
+      { "id": 1007, "name": "MongoDB", "industry": "Document data", "role": "Database Engineer", "description": "Document models, indexes, and aggregation." },
+      { "id": 1008, "name": "Teradata", "industry": "Warehouse", "role": "Database Engineer", "description": "MPP SQL and large analytical loads." },
+      { "id": 1009, "name": "Infosys", "industry": "IT Services / Data", "role": "Database Developer", "description": "SQL development and client schemas." },
+      { "id": 1010, "name": "TCS", "industry": "IT Services / Data", "role": "Database Developer", "description": "Oracle/SQL Server delivery." }
+    ]
+  }
+}
